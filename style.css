@@ -1,0 +1,555 @@
+/* ==========================================================
+   Ridwan Rotan - style.css
+   Palette taken from rattan cane: straw, honey, weave and
+   the dark brown used in the logo.
+   ========================================================== */
+
+:root {
+  --straw: #f4e7cf;
+  --straw-light: #fbf5ea;
+  --cane: #d9b27a;
+  --honey: #b8803f;
+  --weave: #8a5a2b;
+  --bark: #4a2c17;
+  --bark-deep: #35200f;
+  --leaf: #5f6b3a;
+  --ink: #2f2418;
+  --white: #ffffff;
+  --radius: 14px;
+}
+
+/* ---------- Base ---------- */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+body {
+  font-family: "Nunito Sans", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  color: var(--ink);
+  background-color: var(--straw-light);
+  line-height: 1.65;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, .brand-text, .footer-brand {
+  font-family: "Zilla Slab", Georgia, "Times New Roman", serif;
+  color: var(--bark);
+}
+
+a {
+  color: var(--weave);
+}
+
+a:hover {
+  color: var(--bark);
+}
+
+:focus-visible {
+  outline: 3px solid var(--honey);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* ---------- Buttons ---------- */
+.btn-rattan {
+  background-color: var(--weave);
+  border-color: var(--weave);
+  color: var(--white);
+  font-weight: 700;
+}
+
+.btn-rattan:hover,
+.btn-rattan:focus {
+  background-color: var(--bark);
+  border-color: var(--bark);
+  color: var(--white);
+}
+
+.btn-outline-rattan {
+  background-color: transparent;
+  border: 2px solid var(--weave);
+  color: var(--bark);
+  font-weight: 700;
+}
+
+.btn-outline-rattan:hover,
+.btn-outline-rattan:focus {
+  background-color: var(--weave);
+  border-color: var(--weave);
+  color: var(--white);
+}
+
+/* ---------- Navbar ---------- */
+.site-nav {
+  background-color: rgba(251, 245, 234, 0.96);
+  border-bottom: 3px solid var(--cane);
+  backdrop-filter: blur(6px);
+}
+
+.brand-logo {
+  width: 44px;
+  height: auto;
+}
+
+.brand-text {
+  font-size: 1.35rem;
+  font-weight: 700;
+}
+
+.site-nav .nav-link {
+  color: var(--bark);
+  font-weight: 600;
+}
+
+.site-nav .nav-link:hover,
+.site-nav .nav-link:focus {
+  color: var(--honey);
+}
+
+.cart-badge {
+  background-color: var(--bark);
+  color: var(--white);
+  margin-left: 4px;
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 120px 0 80px;
+  background-color: var(--bark-deep);
+  background-image:
+    linear-gradient(rgba(53, 32, 15, 0.62), rgba(53, 32, 15, 0.68)),
+    url("../images/hero-living-room.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-content {
+  width: 100%;
+  text-align: center;
+  max-width: 920px;
+}
+
+.hero-badge {
+  display: inline-block;
+  background-color: #f6b81a;
+  color: var(--bark-deep);
+  font-weight: 700;
+  font-size: 0.82rem;
+  padding: 0.4rem 1rem;
+  border-radius: 6px;
+  margin-bottom: 1.4rem;
+}
+
+.hero-title {
+  font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+  color: #ffffff;
+  font-size: clamp(2.2rem, 5.5vw, 4rem);
+  font-weight: 700;
+  line-height: 1.15;
+  margin-bottom: 1.2rem;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
+}
+
+.hero-lead {
+  color: #fff6e6;
+  font-size: 1.15rem;
+  max-width: 44rem;
+  margin: 0 auto;
+}
+
+/* ---------- Sections ---------- */
+.section {
+  padding: 72px 0;
+}
+
+.section-alt {
+  background-color: var(--straw);
+}
+
+.section-title {
+  font-size: clamp(1.7rem, 3.2vw, 2.3rem);
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.section-lead {
+  max-width: 44rem;
+  margin-bottom: 2rem;
+}
+
+/* ---------- Fact tiles ---------- */
+.fact {
+  background-color: var(--white);
+  border-left: 5px solid var(--cane);
+  border-radius: 8px;
+  padding: 1.1rem 1.2rem;
+  height: 100%;
+}
+
+.fact i {
+  font-size: 1.6rem;
+  color: var(--honey);
+}
+
+.fact h3 {
+  font-size: 1.15rem;
+  margin: 0.4rem 0 0.25rem;
+}
+
+.fact p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+/* ---------- Product cards ---------- */
+.product-card {
+  background-color: var(--white);
+  border: 1px solid #e6d3b3;
+  border-radius: var(--radius);
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-card img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  background-color: var(--straw);
+}
+
+.product-body {
+  padding: 1.1rem 1.2rem 1.3rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.product-category {
+  color: var(--weave);
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.product-name {
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin: 0.1rem 0 0.4rem;
+}
+
+.product-desc {
+  font-size: 0.95rem;
+  flex: 1;
+}
+
+.product-price {
+  font-family: "Zilla Slab", Georgia, serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--bark);
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 0.2rem 0.65rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.status-ready {
+  background-color: #e3ecd0;
+  color: #34410f;
+}
+
+.status-preorder {
+  background-color: #fbe3b8;
+  color: #6b3f00;
+}
+
+/* ---------- Panels ---------- */
+.panel {
+  background-color: var(--white);
+  border: 1px solid #e6d3b3;
+  border-radius: var(--radius);
+  padding: 1.5rem;
+}
+
+.panel-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.panel-title i {
+  color: var(--honey);
+  margin-right: 0.35rem;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 2rem 1rem;
+  color: var(--weave);
+}
+
+.empty-state i {
+  font-size: 2.5rem;
+}
+
+/* ---------- Cart ---------- */
+.cart-item {
+  display: grid;
+  grid-template-columns: 64px 1fr;
+  gap: 0.9rem;
+  padding: 0.9rem 0;
+  border-bottom: 1px solid #ecdcc0;
+}
+
+.cart-item:last-child {
+  border-bottom: 0;
+}
+
+.cart-item img {
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.cart-item-name {
+  font-weight: 700;
+  color: var(--bark);
+  margin: 0;
+}
+
+.cart-item-variant {
+  font-size: 0.9rem;
+  margin: 0 0 0.4rem;
+}
+
+.cart-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.qty-input {
+  width: 76px;
+}
+
+.cart-line-total {
+  margin-left: auto;
+  font-weight: 700;
+  color: var(--bark);
+}
+
+/* ---------- Shipping method choices ---------- */
+.method-option {
+  border: 2px solid #e6d3b3;
+  border-radius: 10px;
+  padding: 0.7rem 0.9rem;
+  display: block;
+  cursor: pointer;
+}
+
+.method-option:has(input:checked) {
+  border-color: var(--weave);
+  background-color: var(--straw-light);
+}
+
+.method-option input {
+  margin-right: 0.5rem;
+}
+
+.method-note {
+  display: block;
+  font-size: 0.88rem;
+  margin-left: 1.65rem;
+}
+
+/* ---------- Summary ---------- */
+.summary-list {
+  margin: 0 0 1rem;
+}
+
+.summary-list div {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.4rem 0;
+  border-bottom: 1px dashed #e0cba5;
+}
+
+.summary-list dt {
+  font-weight: 600;
+}
+
+.summary-list dd {
+  margin: 0;
+  text-align: right;
+}
+
+.summary-total {
+  border-bottom: 0 !important;
+  font-size: 1.25rem;
+  color: var(--bark);
+}
+
+.summary-total dt,
+.summary-total dd {
+  font-family: "Zilla Slab", Georgia, serif;
+  font-weight: 700;
+}
+
+.delivery-box {
+  display: flex;
+  gap: 0.8rem;
+  background-color: var(--straw);
+  border-radius: 10px;
+  padding: 0.9rem 1rem;
+}
+
+.delivery-box i {
+  font-size: 1.6rem;
+  color: var(--weave);
+}
+
+/* ---------- Tables ---------- */
+.table {
+  --bs-table-bg: transparent;
+  color: var(--ink);
+}
+
+.table thead th {
+  color: var(--bark);
+  border-bottom-color: var(--cane);
+}
+
+/* ---------- FAQ ---------- */
+.accordion {
+  --bs-accordion-active-bg: var(--straw);
+  --bs-accordion-active-color: var(--bark);
+  --bs-accordion-btn-focus-box-shadow: 0 0 0 0.2rem rgba(184, 128, 63, 0.4);
+  --bs-accordion-border-color: #e6d3b3;
+}
+
+.accordion-button {
+  font-weight: 700;
+  color: var(--bark);
+}
+
+/* ---------- Forms ---------- */
+.form-label {
+  font-weight: 700;
+  color: var(--bark);
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--honey);
+  box-shadow: 0 0 0 0.2rem rgba(184, 128, 63, 0.3);
+}
+
+/* ---------- Modal ---------- */
+.order-summary {
+  background-color: var(--straw-light);
+  border: 1px solid #e6d3b3;
+  border-radius: 8px;
+  padding: 0.9rem;
+  font-size: 0.88rem;
+  white-space: pre-wrap;
+  word-break: break-word;
+  color: var(--ink);
+  margin-bottom: 0;
+}
+
+/* ---------- Toast ---------- */
+.toast-rattan {
+  background-color: var(--bark);
+  color: var(--white);
+}
+
+/* ---------- Footer (clear, high-contrast text) ---------- */
+.site-footer {
+  background-color: var(--bark-deep);
+  color: #fff6e6;
+  padding: 56px 0 24px;
+}
+
+.footer-brand {
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.footer-heading {
+  color: #ffd99a;
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+}
+
+.footer-text,
+.footer-copy {
+  color: #fff6e6;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  color: #fff6e6;
+  margin-bottom: 0.45rem;
+}
+
+.footer-links a {
+  color: #ffffff;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.footer-links a:hover,
+.footer-links a:focus {
+  color: #ffd99a;
+}
+
+.footer-links i {
+  color: #ffd99a;
+  margin-right: 0.3rem;
+}
+
+.footer-rule {
+  border-color: rgba(255, 246, 230, 0.35);
+  opacity: 1;
+  margin: 2rem 0 1rem;
+}
+
+/* ---------- Small screens ---------- */
+@media (max-width: 575.98px) {
+  .hero {
+    padding-top: 100px;
+    min-height: 90vh;
+  }
+
+  .section {
+    padding: 52px 0;
+  }
+
+  .panel {
+    padding: 1.1rem;
+  }
+}

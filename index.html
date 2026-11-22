@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Ridwan Rotan exports handmade rattan furniture and crafts from Cirebon, Indonesia to Australia. Check stock, variants, total price, shipping cost and delivery time.">
+  <title>Ridwan Rotan | Handmade Rattan Furniture from Cirebon to Australia</title>
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+  <!-- Bootstrap 5 and Bootstrap Icons (CDN) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Zilla+Slab:wght@500;600;700&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <nav class="navbar navbar-expand-lg fixed-top site-nav">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="#home">
+        <img src="images/logo-badge.png" alt="Ridwan Rotan logo" class="brand-logo" width="44" height="47">
+        <span class="brand-text">Ridwan Rotan</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+              aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#products">Products</a></li>
+          <li class="nav-item"><a class="nav-link" href="#order">Order</a></li>
+          <li class="nav-item"><a class="nav-link" href="#shipping">Shipping</a></li>
+          <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          <li class="nav-item ms-lg-2">
+            <a class="btn btn-rattan btn-sm position-relative" href="#order">
+              <i class="bi bi-basket3"></i> My order
+              <span id="navCartCount" class="badge rounded-pill cart-badge">0</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- ===================== HERO ===================== -->
+    <section id="home" class="hero">
+      <div class="container hero-content">
+        <span class="hero-badge">Direct exporter from Cirebon, Indonesia to Australia</span>
+        <h1 class="hero-title">Handcrafted Natural Rattan for Australian Homes</h1>
+        <p class="hero-lead">
+          Handmade rattan furniture and home decor, from chairs and sofas to mirrors and lamps.
+          Check what is in stock, see your total price and shipping cost, and get a delivery estimate to Sydney, Melbourne, Brisbane, Perth, Adelaide and beyond.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===================== ABOUT ===================== -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="row g-5 align-items-start">
+          <div class="col-lg-6">
+            <h2 class="section-title">About Ridwan Rotan</h2>
+            <p>
+              Ridwan Rotan is a rattan export business based in Cirebon, West Java, a region known across Indonesia for rattan furniture.
+              Since 2024 we have made furniture and handicrafts by hand and shipped them to buyers overseas.
+            </p>
+            <p>
+              Every piece is woven, bent and tied by local craftspeople using natural rattan cane.
+              We now ship to Australia, and we built this site to answer the questions buyers ask us most: is it in stock, what sizes are there, what will it cost, and when will it arrive.
+            </p>
+          </div>
+          <div class="col-lg-6">
+            <div class="row g-3">
+              <div class="col-6">
+                <div class="fact">
+                  <i class="bi bi-hand-index-thumb"></i>
+                  <h3>Handmade</h3>
+                  <p>Woven and tied by hand in our Cirebon workshop.</p>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="fact">
+                  <i class="bi bi-tree"></i>
+                  <h3>Natural rattan</h3>
+                  <p>Natural cane with a clear or honey finish.</p>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="fact">
+                  <i class="bi bi-box-seam"></i>
+                  <h3>Export packed</h3>
+                  <p>Packed for long sea and air journeys.</p>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="fact">
+                  <i class="bi bi-geo-alt"></i>
+                  <h3>Ships to Australia</h3>
+                  <p>All states and territories, priced in AUD.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PRODUCTS ===================== -->
+    <section id="products" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title">Our products</h2>
+        <p class="section-lead">
+          Choose a variant to see its price and availability. Ready stock ships within 3 days. Pre-order items are made for you.
+        </p>
+        <div id="productGrid" class="row g-4"></div>
+      </div>
+    </section>
+
+    <!-- ===================== ORDER ===================== -->
+    <section id="order" class="section">
+      <div class="container">
+        <h2 class="section-title">Order calculator</h2>
+        <p class="section-lead">
+          Set your quantities, choose where we are shipping to, and see the total and delivery estimate. Then send your order to us.
+        </p>
+
+        <div class="row g-4">
+          <!-- Order list -->
+          <div class="col-lg-7">
+            <div class="panel">
+              <h3 class="panel-title"><i class="bi bi-basket3"></i> Your order list</h3>
+              <div id="cartEmpty" class="empty-state">
+                <i class="bi bi-basket"></i>
+                <p>Your order list is empty. Pick a variant in the <a href="#products">Products</a> section and press "Add to order".</p>
+              </div>
+              <div id="cartList" class="cart-list" aria-live="polite"></div>
+            </div>
+          </div>
+
+          <!-- Summary -->
+          <div class="col-lg-5">
+            <div class="panel">
+              <h3 class="panel-title"><i class="bi bi-calculator"></i> Total and delivery</h3>
+
+              <div class="mb-3">
+                <label for="destination" class="form-label">Deliver to (state or territory)</label>
+                <select id="destination" class="form-select"></select>
+              </div>
+
+              <fieldset class="mb-3">
+                <legend class="form-label fs-6">Shipping method</legend>
+                <div id="methodList" class="d-grid gap-2"></div>
+              </fieldset>
+
+              <dl class="summary-list">
+                <div><dt>Products subtotal</dt><dd id="sumSubtotal">AUD 0.00</dd></div>
+                <div><dt>Total weight</dt><dd id="sumWeight">0 kg</dd></div>
+                <div><dt>Shipping cost</dt><dd id="sumShipping">AUD 0.00</dd></div>
+                <div class="summary-total"><dt>Total</dt><dd id="sumTotal">AUD 0.00</dd></div>
+              </dl>
+
+              <div class="delivery-box">
+                <i class="bi bi-truck"></i>
+                <div>
+                  <strong>Estimated delivery</strong>
+                  <div id="sumDays">Add a product to see the estimate.</div>
+                  <div id="sumDates" class="small"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Order form -->
+        <div class="panel mt-4" id="orderFormPanel">
+          <h3 class="panel-title"><i class="bi bi-send"></i> Send your order</h3>
+          <form id="orderForm" novalidate>
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label for="fullName" class="form-label">Full name</label>
+                <input type="text" class="form-control" id="fullName" name="fullName" autocomplete="name" required>
+                <div class="invalid-feedback">Please enter your name.</div>
+              </div>
+              <div class="col-md-6">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" name="email" autocomplete="email" required>
+                <div class="invalid-feedback">Please enter a valid email address.</div>
+              </div>
+              <div class="col-md-6">
+                <label for="phone" class="form-label">Phone or WhatsApp</label>
+                <input type="tel" class="form-control" id="phone" name="phone" autocomplete="tel" placeholder="+61 4xx xxx xxx" required minlength="8">
+                <div class="invalid-feedback">Please enter a phone number (at least 8 characters).</div>
+              </div>
+              <div class="col-md-6">
+                <label for="postcode" class="form-label">Postcode</label>
+                <input type="text" class="form-control" id="postcode" name="postcode" inputmode="numeric" pattern="[0-9]{4}" maxlength="4" required>
+                <div class="invalid-feedback">Please enter a 4-digit Australian postcode.</div>
+              </div>
+              <div class="col-12">
+                <label for="address" class="form-label">Delivery address</label>
+                <input type="text" class="form-control" id="address" name="address" autocomplete="street-address" required>
+                <div class="invalid-feedback">Please enter your delivery address.</div>
+              </div>
+              <div class="col-12">
+                <label for="notes" class="form-label">Notes (optional)</label>
+                <textarea class="form-control" id="notes" name="notes" rows="3" placeholder="Anything we should know, such as bulk pricing or a delivery deadline"></textarea>
+              </div>
+            </div>
+            <div id="formAlert" class="alert alert-warning mt-3 d-none" role="alert"></div>
+            <button type="submit" class="btn btn-rattan btn-lg mt-3">
+              <i class="bi bi-check2-circle"></i> Place order request
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SHIPPING ===================== -->
+    <section id="shipping" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title">Shipping to Australia</h2>
+        <p class="section-lead">
+          Shipping cost is a base fee plus a rate per kilogram, adjusted by state. Delivery time is production or handling time plus transit time.
+        </p>
+
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <div class="panel h-100">
+              <h3 class="panel-title">Shipping methods</h3>
+              <div class="table-responsive">
+                <table class="table align-middle mb-0">
+                  <thead>
+                    <tr><th scope="col">Method</th><th scope="col">Base fee</th><th scope="col">Per kg</th><th scope="col">Transit</th></tr>
+                  </thead>
+                  <tbody id="methodTable"></tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="panel h-100">
+              <h3 class="panel-title">State adjustments</h3>
+              <div class="table-responsive">
+                <table class="table align-middle mb-0">
+                  <thead>
+                    <tr><th scope="col">Destination</th><th scope="col">Rate</th><th scope="col">Extra days</th></tr>
+                  </thead>
+                  <tbody id="zoneTable"></tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== FAQ ===================== -->
+    <section id="faq" class="section">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-9">
+            <h2 class="section-title">Frequently asked questions</h2>
+            <p class="section-lead">The questions buyers ask us most.</p>
+            <div class="accordion" id="faqAccordion"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CONTACT ===================== -->
+    <section id="contact" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title">Contact us</h2>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="fact">
+              <i class="bi bi-envelope"></i>
+              <h3>Email</h3>
+              <p><a id="contactEmail" href="#contact"></a></p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="fact">
+              <i class="bi bi-whatsapp"></i>
+              <h3>WhatsApp</h3>
+              <p><a id="contactWhatsapp" href="#contact"></a></p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="fact">
+              <i class="bi bi-geo-alt"></i>
+              <h3>Workshop</h3>
+              <p id="contactAddress"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-5">
+          <div class="d-flex align-items-center gap-2 mb-3">
+            <img src="images/logo-badge.png" alt="Ridwan Rotan logo" class="brand-logo" width="44" height="47">
+            <span class="footer-brand">Ridwan Rotan</span>
+          </div>
+          <p class="footer-text">Authentic rattan crafts and furniture from Cirebon, Indonesia, exported to Australia since 2024.</p>
+        </div>
+        <div class="col-6 col-md-3">
+          <h3 class="footer-heading">Explore</h3>
+          <ul class="footer-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#order">Order</a></li>
+            <li><a href="#shipping">Shipping</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-4">
+          <h3 class="footer-heading">Contact</h3>
+          <ul class="footer-links">
+            <li><i class="bi bi-envelope"></i> <span id="footerEmail"></span></li>
+            <li><i class="bi bi-telephone"></i> <span id="footerPhone"></span></li>
+            <li><i class="bi bi-geo-alt"></i> <span id="footerAddress"></span></li>
+          </ul>
+        </div>
+      </div>
+      <hr class="footer-rule">
+      <p class="footer-copy mb-0">&copy; 2026 Ridwan Rotan. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- ===================== ORDER CONFIRMATION MODAL ===================== -->
+  <div class="modal fade" id="orderModal" tabindex="-1" aria-labelledby="orderModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title fs-5" id="orderModalTitle">Order request ready</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Thank you, <strong id="modalName"></strong>. Your order reference is <strong id="modalRef"></strong>.</p>
+          <p>Send this summary to us by WhatsApp or email and we will confirm stock, the final total and payment details.</p>
+          <pre id="modalSummary" class="order-summary"></pre>
+        </div>
+        <div class="modal-footer">
+          <a id="modalWhatsapp" class="btn btn-rattan" href="#order" target="_blank" rel="noopener">
+            <i class="bi bi-whatsapp"></i> Send by WhatsApp
+          </a>
+          <a id="modalEmail" class="btn btn-outline-rattan" href="#order">
+            <i class="bi bi-envelope"></i> Send by email
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== TOAST ===================== -->
+  <div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div id="appToast" class="toast align-items-center toast-rattan" role="status" aria-live="polite" aria-atomic="true">
+      <div class="d-flex">
+        <div class="toast-body" id="toastMessage"></div>
+        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
